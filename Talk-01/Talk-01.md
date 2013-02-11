@@ -1,4 +1,3 @@
-
 # Starting with NodeStack
 
 ## Goals of picking new stack
@@ -35,27 +34,27 @@
 
 ### Getting setup
 
-	1. Startup your Macbook
-	2. Download NodeJS package from http://nodejs.org
-	3. In Finger, double click on Downloads/node-*.pkg and run the installer
-	4. Open a the Mac "Terminal" (Applications -> Utilities -> Terminal)
-	5. type "cd Desktop" and press enter (We'll use your desktop to keep things simple for now)
-	6. type "node"
-	7. type "console.log('Hello World!');"
-	8. type ".exit" and you're done with getting setup
+1. Startup your Macbook
+2. Download NodeJS package from http://nodejs.org
+3. In Finger, double click on Downloads/node-*.pkg and run the installer
+4. Open a the Mac "Terminal" (Applications -> Utilities -> Terminal)
+5. type "cd Desktop" and press enter (We'll use your desktop to keep things simple for now)
+6. type "node"
+7. type "console.log('Hello World!');"
+8. type ".exit" and you're done with getting setup
 
 Congratulations you're up and running with NodeJS.
 
 ### Small step forward
 
-	1. Start up your favorite Text Editor
-	2. Open a new file
-		a. Type the following line without the double quotes
-		b. "console.log('Hello again.');"
-		c. Save it to your desktop as "hello.js"
-	3. Switch the Terminal
-	4. Type "node hello.js"
-	5. Congratulations you've written your first Node program
+1. Start up your favorite Text Editor
+2. Open a new file
+	a. Type the following line without the double quotes
+	b. "console.log('Hello again.');"
+	c. Save it to your desktop as "hello.js"
+3. Switch the Terminal
+4. Type "node hello.js"
+5. Congratulations you've written your first Node program
 
 You've written a simple program.
 
@@ -69,9 +68,9 @@ web servers easily.
 
 We're going to create three files in this example-
 
-	+ index.html
-	+ 404.html
-	+ server.js
++ index.html
++ 404.html
++ server.js
 
 The first is some HTML we'll send to the browser, the second is a simple 404 message page.
 Finally server.js does the heavey lifting by keeping both files in memory ready for
@@ -141,11 +140,11 @@ type the JavaScript comments)
 
 Now let's try this out. 
 	
-	1. Switch back to Terminal and type- "node server.js"
-	2. Point your browser at http://localhost:3000
-	3. You should see your "Hi There" page
-	4. Try http://localhost:3000/something-else
-	5. You should see the 404 page
+1. Switch back to Terminal and type- "node server.js"
+2. Point your browser at http://localhost:3000
+3. You should see your "Hi There" page
+4. Try http://localhost:3000/something-else
+5. You should see the 404 page
 
 That's it. You've written your first high performance web service.
 
@@ -158,9 +157,9 @@ Our campus web server is made up of two large Solaris boxes run behind a high
 performance hardware load balancer. So why is that? We're using a different
 model to process http requests.
 
-	1. We're only doing what is needed and nothing more (Apache, does much, much more)
-	2. We're only running one process not one process per browser request
-	3. We're reading all our content from memory (fast) one time versus reading from disc (slow) for each request
+1. We're only doing what is needed and nothing more (Apache, does much, much more)
+2. We're only running one process not one process per browser request
+3. We're reading all our content from memory (fast) one time versus reading from disc (slow) for each request
 
 Look at the lines between "http.createServer" and "listen". This is where we
 implement what Apache does internally. In practice we don't have to do all 
@@ -261,12 +260,12 @@ I've included the "*" route as the last route defined.
 
 What we learned so far
 
-	1. How to install NodeJS for development
-	2. How to use the NodeJS as a shell
-	3. How to write simple NodeJS programs
-	4. How to use NodeJS modules
-	5. How to install additional modules
-	6. How to create a basic web server with either http module or the express framework
+1. How to install NodeJS for development
+2. How to use the NodeJS as a shell
+3. How to write simple NodeJS programs
+4. How to use NodeJS modules
+5. How to install additional modules
+6. How to create a basic web server with either http module or the express framework
 
 # On your own
 
