@@ -3,14 +3,22 @@ picking-up-nodestack
 
 # Overview
 
-On Feb 12, 2013 I am scheduled to give a presentation at work.  I'm picking
-a quick, hands on tutorial of NodeJS to show half the stack we'll be migrating
-to for new projects that need to scale where LAMP is a poor fit.
+This started as a presentation for some colleagues on moving forward
+with a new web development stack. My goal was to give them a quick
+hands on tutorial that would leave them with a working copy of NodeJS
+on their laptops to play with. I realized I had enough material to 
+do more than that so that is what started picking-up-nodestack.
 
-I probably have enough material for two talks.  Will split this as a part 1,
-part 2 presentation.
 
-* Part 1: Introduce NodeJS, get it setup, write a simple program, use a module, write a simple web server
-* Part 2: Introduce YUI3 Server side (e.g. io-base, handlebars), evolve simple web server into a new services
+* Talk 01
+	+ Install NodeJS on a Macbook
+	+ Write a simple program
+	+ Use a module
+	+ Write a simple web server
+* Talk 02
+	+ Introduce YUI3
+	+ Introduce io-base
+	+ Introduct handlebars
+	+ Write a simple web server side mashup
 
 
