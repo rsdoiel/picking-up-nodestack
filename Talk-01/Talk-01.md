@@ -122,13 +122,15 @@ type the JavaScript comments)
 	// Let's create our web server
 	http.createServer(function (request, response) {
 	        // Handle our web requests, build a response
-	        if (request.url === "/" || request.url = "/index.html") {
+	        if (request.url === "/" || request.url === "/index.html") {
+			console.log(request.url, "found");
 	                response.writeHead(200, {
 				"Content-Type": "text/html",
 				"Content-Size": homepage.length
 			});
 			response.end(homepage);
 	        } else {
+			console.log(request.url, "not found");
 	                response.writeHead(404, {
 	                        "Content-Type": "text/html",
 	                        "Content-Size": errorpage.length

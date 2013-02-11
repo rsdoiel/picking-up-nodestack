@@ -10,13 +10,15 @@ var fs = require("fs"),
 // Let's create our web server
 http.createServer(function (request, response) {
         // Handle our web requests, build a response
-        if (request.url === "/" || request.url = "/index.html") {
+        if (request.url === "/" || request.url === "/index.html") {
+		console.log(request.url, 200, "found");
                 response.writeHead(200, {
 			"Content-Type": "text/html",
 			"Content-Size": homepage.length
 		});
 		response.end(homepage);
         } else {
+		console.log(request.url, 404, "not found");
                 response.writeHead(404, {
                         "Content-Type": "text/html",
                         "Content-Size": errorpage.length
@@ -24,3 +26,4 @@ http.createServer(function (request, response) {
                 response.end(errorpage);
         }
 }).listen(3000);
+console.log("Started web server on port 3000");
