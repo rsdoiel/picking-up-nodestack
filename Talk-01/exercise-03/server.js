@@ -9,7 +9,7 @@ var fs = require("fs"),
 
 // Now we need to define our routes, first our homepage then everything else
 server.get("/", function (request, response) {
-        console.log(request.url, "received");
+        console.log(request.url, "found");
 	// Notice we're using .send instead of .end
         response.send(200, homepage);
 });
