@@ -235,27 +235,20 @@ so it now looks like (you can skip typing the JavaScript comments)-
 	var fs = require("fs"),
 	        // Notice we don't need to include http directly, that is already inside express
 	        express = require("express"),
+	        // create our web server object
+	        server = express(),
 	        // Read in our pages 
 	        homepage = fs.readFileSync("index.html").toString(),
-		api_mockup = JSON.parse(fs.readFileSync("api-mockup.json").toString(), errorpage = fs.readFileSync("404.html").toString()),
-	        // create our web server
-	        server = express();
+		errorpage = fs.readFileSync("404.html").toString();
 
 	// Now we need to define our routes, first our homepage then everything else
+	// Note the order of our route definitions are important.
 	server.get("/", function (request, response) {
 	        console.log(request.url, 200, "found");
 		// Notice we're using .send instead of .end
 	        response.send(200, homepage);
 	});
 	
-	// This is a our api mockup route
-	server.get("/api/*", function (request, response) {
-		console.log(request.url, 200, "found");
-		// Since api_mockup is JavaScript object,
-		// the content type will automatically set to application/javascript
-		response.send(200, api_mockup);
-	});
-
 	// Here's a catch all route, in this case treating them as a 404.
 	// You could also do other things (e.g. redirect to a CDN)
 	server.get("*", function (request, response) {
@@ -277,9 +270,7 @@ and return results. It can run a calculation and return a result. It could also 
 template and combine it with data before sending it back to the browser via the response
 object.
 
-Note: In express the order you define your routes matters. Those defined
-towards the top of the file with be matched before this towards the end. That is why
-I've included the "*" route as the last route defined.
+For more information about the Express NodeJS module see http://expressjs.com.
 
 What we learned so far
 
@@ -295,18 +286,18 @@ What we learned so far
 The follow two exercises use both reading content from disc and the concept of defining
 routes using the express module.
 
-* How would you support add CSS and JavaScript files? (hint: add some more routes)
+* How would you support adding CSS and JavaScript files? (hint: add some more routes)
 * How would you mockup an API service? (hint: use a text file containing JSON data)
 
 Here's an example JSON file:
 
 ```JavaScript
 	{
-		friends: ["John", "Paulina", "Georgia", "Ringo"],
-		favorites: {
-			colors: {
-				cardinal: ["John", "Ringo"],
-				gold: ["Paulina", "Georgia"],
+		"friends": ["John", "Paulina", "Georgia", "Ringo"],
+		"favorites": {
+			"colors": {
+				"cardinal": ["John", "Ringo"],
+				"gold": ["Paulina", "Georgia"],
 			}
 		}
 	}
