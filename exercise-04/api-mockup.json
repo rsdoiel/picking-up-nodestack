@@ -1,0 +1,9 @@
+	{
+		friends: ["John", "Paulina", "Georgia", "Ringo"],
+		favorites: {
+			colors: {
+				cardinal: ["John", "Ringo"],
+				gold: ["Paulina", "Georgia"],
+			}
+		}
+	}

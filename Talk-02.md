@@ -1,6 +1,38 @@
 
+# Nodestack+YUI3 for mockups and prototypes
 
-# NodeJS+YUI3 and server side mashups
+Today's talk is focused on using our nacient knowledge of NodeJS to suppy
+a development platform for prototyping web systems. These could be existing
+systems or new ones.  Here's going to take advantage of our common JSON
+data format, express framework for setting up routes.
+
+### Prequistes
+
+In this talk we assumed you've have your same setup as in talk one. That
+means the following-
+
+* NodeJS is installed and working
+* You've previously installed express module
+* You have a text editor
+* You know how to start/stop your NodeJS servers using the Mac Terminal
+
+
+## Mockup an API results browser side
+
++ Why YUI3?
+	+ A good loader
+	+ Excellent Module support
+	+ NodeJS as a first class environment
+	+ Can work along side jQuery
+
+## Mocking up a the web API server side
+
+We'll start with talk one's final example.  We'll extend that by using YUI 3's io
+module in the browser to fetch the API data.  We'll use a JSON file server side
+to simular API content and add a few routes so we make the simulation complete.
+
+
+## NodeJS+YUI3 and server side real data mashups
 
 
 YUI3 is more than a UI library[1].  It provides additional services such as a robust
@@ -18,7 +50,7 @@ Handlebars provides flexible templating that works both in the browser and serve
 
 To explore this we'll install the YUI 3.x library  in NodeJS and use it to access some USC APIs.
 
-#### Prerequisites
+### Prerequisites
 
 We need to install yui@stable for this next example. Against we use the "npm" tool to install the module-
 
