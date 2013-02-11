@@ -211,6 +211,20 @@ From your Mac Terminal program run the following command-
 
 This will install the express module and make it available to NodeJS.  
 
+We're going to create a new file to add to our example. In your text editor
+create a file named "api-mockup.json" that will have the content below-
+
+```JavaScript
+	{
+		"friends": ["John", "Paulina", "Georgina", "Ringo"],
+		"favorites": {
+			"colors": {
+				"cardinal": ["John", "Paulina"],
+				"gold": ["Georgina", "Ringo"]
+			}
+		}
+	}
+```
 
 ### Exploring routes
 
@@ -223,17 +237,24 @@ so it now looks like (you can skip typing the JavaScript comments)-
 	        express = require("express"),
 	        // Read in our pages 
 	        homepage = fs.readFileSync("index.html").toString(),
-	        errorpage = fs.readFileSync("404.html").toString(),
+		api_mockup = JSON.parse(fs.readFileSync("api-mockup.json").toString(), errorpage = fs.readFileSync("404.html").toString()),
 	        // create our web server
 	        server = express();
 
 	// Now we need to define our routes, first our homepage then everything else
 	server.get("/", function (request, response) {
-	        console.log(request.url, "found");
+	        console.log(request.url, 200, "found");
 		// Notice we're using .send instead of .end
 	        response.send(200, homepage);
 	});
-
+	
+	// This is a our api mockup route
+	server.get("/api/*", function (request, response) {
+		console.log(request.url, 200, "found");
+		// Since api_mockup is JavaScript object,
+		// the content type will automatically set to application/javascript
+		response.send(200, api_mockup);
+	});
 
 	// Here's a catch all route, in this case treating them as a 404.
 	// You could also do other things (e.g. redirect to a CDN)
