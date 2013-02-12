@@ -113,10 +113,10 @@ type the JavaScript comments)
 	// Load the NodeJS modules we need, this is like require() or require_once() in PHP
 	var fs = require("fs"),
 	        http = require("http"),
-	// Get the contents of index.html and save them in homepage
-	homepage = fs.readFileSync("index.html").toString(),
-	// Get the contents of errorpage
-	errorpage = fs.readFileSync("404.html").toString();
+		// Get the contents of index.html and save them in homepage
+		homepage = fs.readFileSync("index.html").toString(),
+		// Get the contents of errorpage
+		errorpage = fs.readFileSync("404.html").toString();
 
 
 	// Let's create our web server
