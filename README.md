@@ -3,7 +3,7 @@
 ## Goals of picking new stack
 
 1. Simplicity
-	1. HTML, CSS, JavaScript, JSON is the whole stack
+	* HTML, CSS, JavaScript, JSON is the whole stack
 2. Faster/easier development cycle
 	* Simple development environment
 		* Texteditor
