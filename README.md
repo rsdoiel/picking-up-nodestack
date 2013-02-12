@@ -3,31 +3,31 @@
 ## Goals of picking new stack
 
 1. Simplicity
-	a. HTML, CSS, JavaScript, JSON is the whole stack
+	1. HTML, CSS, JavaScript, JSON is the whole stack
 2. Faster/easier development cycle
-	a. Simple development environment
-		1. Texteditor
-		2. NodeJS
-		3. npm (Node's module manager)
-		4. MongoDB (optional) 
-	b. A rapid development cycle
+	1. Simple development environment
+		* Texteditor
+		* NodeJS
+		* npm (Node's module manager)
+		* MongoDB (optional) 
+	2. A rapid development cycle
 		1. Code a front end with HTML, CSS and JavaScript
 		2. Use JSON blobs to mockup API requests (replace alter with API/DB calls as later)
 		3. Map/Wrap the URLs you need to service your pages (i.e. a NodeJS script)
 		4. Fire up the http server object, test, then iterate to evolve
-	c. A growing ecosystem of modules and tools
-		1. jslint, jscheckstyle, YUI's tools, eventually Mojito
-		2. A large developer community
+	3. A growing ecosystem of modules and tools
+		* jslint, jscheckstyle, YUI's tools, eventually Mojito
+		* A large developer community
 3. Performance and scalability
-	a. More control with less complexity
-		1. NodeJS
-		2. A datastore/database (e.g. MongoDB via MongoLab or MongoHQ)
-		3. A scaling environment (e.g. Heroku, Nodejitsu, EngineYard)
-	b. Levage frontend experience through the whole stack
-		1. The NodeJS uses the same process model as the Browser
-		2. You already are experienced with JavaScript
-		3. You already use/understand an HTTP transaction (e.g. GET, POST, PUT, DELETE)
-		4. Add an basic understanding of NodeJS' module system and you're ready to go
+	1. More control with less complexity
+		* NodeJS
+		* A datastore/database (e.g. MongoDB via MongoLab or MongoHQ)
+		* A scaling environment (e.g. Heroku, Nodejitsu, EngineYard)
+	2. Levage frontend experience through the whole stack
+		* The NodeJS uses the same process model as the Browser
+		* You already are experienced with JavaScript
+		* You already use/understand an HTTP transaction (e.g. GET, POST, PUT, DELETE)
+		* Add an basic understanding of NodeJS' module system and you're ready to go
 
 
 ## Hands on
