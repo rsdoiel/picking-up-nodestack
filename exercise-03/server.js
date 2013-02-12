@@ -3,7 +3,7 @@
 	        express = require("express"),
 	        // Read in our pages 
 	        homepage = fs.readFileSync("index.html").toString(),
-		api_mockup = JSON.parse(fs.readFileSync("api-mockup.json").toString(), errorpage = fs.readFileSync("404.html").toString()),
+		errorpage = fs.readFileSync("404.html").toString()),
 	        // create our web server
 	        server = express();
 
