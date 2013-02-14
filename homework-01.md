@@ -8,40 +8,25 @@ as well as one more route *before* the default route that handles our 404.
 Your updated server.js file should look like this-
 
 ```JavaScript
-	var fs = require("fs"),
-	        express = require("express"),
-	        // create our web server
-		server = express(),
-		// Our pages
-	        homepage = fs.readFileSync("index.html").toString(),
-		errorpage = fs.readFileSync("404.html").toString(),
-		// Get some JSON content to mockup our API
-		api_mockup = JSON.parse(fs.readFileSync("api-mockup.json").toString()); 
+	var express = require("express"),
+	        server = express();
 
-	// Now we need to define our routes, first our homepage then everything else
+	// Now we need to define our routes. 
+	// First we define our homepage then everything else.
 	server.get("/", function (request, response) {
 	        console.log(request.url, 200, "found");
 		// Notice we're using .send instead of .end
-	        response.send(200, homepage);
+	        response.status(200).sendfile("index.html");
 	});
 	
-	// This is a our api mockup route
-	server.get("/api", function (request, response) {
-		console.log(request.url, 200, "found");
-		// Since api_mockup is JavaScript object,
-		// the content type will automatically set to application/javascript
-		response.send(200, api_mockup);
-	});
-
 	// Here's a catch all route, in this case treating them as a 404.
 	// You could also do other things (e.g. redirect to a CDN)
 	server.get("*", function (request, response) {
 	        console.error(request.url, "not found");
-	        response.send(404, errorpage);
+	        response.status(404).sendfile("404.html");
 	});
 
-
-	console.log("Starting web server on port 3000");
+	console.log("Starting web server on port",3000);
 	server.listen(3000);
 ```
 
@@ -73,7 +58,7 @@ You can set a specific mime type in Express using the *set* method on the respon
 		// Set the mime-type with response.set()
 		response.set("Content-Type", "text/css");
 		// Now send out the css as usual
-		response.send(200, style_css);
+		response.status(200).sendfile("style.css");
 	});
 ```
 
