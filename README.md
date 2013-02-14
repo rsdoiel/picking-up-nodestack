@@ -79,5 +79,5 @@ own website like yuilibrary.com or expressjs.com).
 
 # The lessions
 
-* [Getting Node setup and run](lesson-01)
+* [Getting Node setup and run](lesson-01.md)
 
