@@ -281,7 +281,7 @@ What we learned so far
 5. How to install additional modules
 6. How to create a basic web server with either http module or the express framework
 
-# [On your own](homework-01)
+# [On your own](homework-01.md)
 
 The follow two exercises use both reading content from disc and the concept of defining
 routes using the express module.
