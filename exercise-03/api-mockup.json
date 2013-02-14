@@ -1,9 +1,0 @@
-{
-	"friends": ["John", "Paulina", "Georgina", "Ringo"],
-	"favorites": {
-		"colors": {
-			"cardinal": ["John", "Paulina"],
-			"gold": ["Georgina", "Ringo"]
-		}
-	}
-}
