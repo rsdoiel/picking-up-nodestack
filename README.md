@@ -1,30 +1,18 @@
-# Starting with NodeStack
+# Picking up Nodestack
 
-picking-up-nodestack is a self guided tour of learning the basics of NodeJS
-along with the basics of MongoDB. It is evolving from a series of
-presentations for my colleages.
+picking-up-nodestack is designed to be a self guided tour to explore writing 
+web services based on NodeJS and JSON friendly databases (e.g. [MongoDB](http://mongodb.org))
+or public web APIs (e.g. [YQL](http://developer.yahoo/com/yql/console)). It
+is evolving from a presentation I made for my colleages.
 
 
-## Goals of picking new stack
+## What is Node in Nodestack?
 
-### What is Nodestack?
-
-For those who might not have heard of it or just didn't follow what
-the buzz was about since 2010. 
-
-Since 1992 most of us working on the web have used either LAMP (i.e. Linux,
-Apache, MySQL and PHP) or a variant to develop and deploy websites
-and applications. The other big option was the Microsoft webstack - (Windows
-Server, IIS, ASP, SQL Server).  There are a few industrial strength stacks
-like .Net, C# or Java's Tomcat, jBoss or WebSphere. The trouble
-with these platforms is they have become increasingly complex. This is
-particularly true when you try to scale them out. 
-
-The result of these challenges is recent years has been to expriment with
-replacing the vintage web stacks with something either simpler to develop
-with or scale. Popular examples have included Ruby on Rails and Google's
-Python based App Engine. For some these weren't quite the fit they wanted.
-Then Ryan Dahl started this little project called NodeJS...
+For those who might not have heard or just didn't ignored that buzz back
+in 2009 NodeJS, more commonally just called Node, is a [platform that lets
+you build networked services using JavaScript](http://nodejs.org/about/)
+(e.g. a web server). In simple terms it is an alternative to more
+vintage web development stacks like LAMP (Linux+Apache+MySQL+PHP/Perl/Python).
 
 
 Ever wonder what it would be like to build things for the web and only
