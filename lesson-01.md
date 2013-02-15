@@ -1,4 +1,4 @@
-# Starting with Node
+# Getting Node up and running
 
 ## Goals of this lesson
 
@@ -216,14 +216,21 @@ so it now looks like (you can skip typing the JavaScript comments)-
 	// First we define our homepage then everything else.
 	server.get("/", function (request, response) {
 	        console.log(request.url, 200, "found");
-		// Notice we're using .send instead of .end
-	        response.status(200).sendfile("index.html");
+	        // Set the http status code we want to return.
+	        response.status(200);
+		// Notice we're using .sendfile instead of .end
+		// .sendfile will read a file from disc and keep
+		// it resident in memory for a period of time.
+		// How long can be configured by express.
+	        response.sendfile("index.html");
 	});
 	
 	// Here's a catch all route, in this case treating them as a 404.
 	// You could also do other things (e.g. redirect to a CDN)
 	server.get("*", function (request, response) {
 	        console.error(request.url, "not found");
+	        // Here we've chained .status and and .sendfile together
+	        // for brevity.
 	        response.status(404).sendfile("404.html");
 	});
 
@@ -244,22 +251,23 @@ For more information about the Express NodeJS module see http://expressjs.com.
 
 What we learned so far
 
-1. How to install NodeJS for development
-2. How to use the NodeJS as a shell
-3. How to write simple NodeJS programs
-4. How to use NodeJS modules
+1. How to install Node for development
+2. How to use the Node as a shell (i.e. the repl - Read, Evaluate, Process loop)
+3. How to write and run simple Node programs
+4. How to use Node modules
 5. How to install additional modules
 6. How to create a basic web server with either http module or the express framework
+7. We've started to explore the concept of "routes" in web services
 
 # [On your own](homework-01.md)
 
-The follow two exercises use both reading content from disc and the concept of defining
-routes using the express module.
+The following homework expores adding more routes to your simple web server.
 
-* How would you support adding CSS and JavaScript files? (hint: add some more routes)
-* How would you mockup an API service? (hint: use a text file containing [JSON](http://json.org) data)
+* How would you support adding CSS, JavaScript and [JSON](http://json.org) files? (hint: add some more routes)
+* Using express, how do you make sure that files you're sending to the browser are sent with the correct mime-type?
 
-Here's an example JSON file:
+
+Here's an example [JSON](http://json.org) file:
 
 ```JavaScript
 	{
@@ -272,5 +280,7 @@ Here's an example JSON file:
 		}
 	}
 ```
+
+JSON files are usually served with a content type of application/javascript.
 
 
