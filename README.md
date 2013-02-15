@@ -9,7 +9,7 @@ is evolving from a presentation I made for my colleages.
 ## What is Node and Nodestack?
 
 Ever wonder what it would be like to build things for the web and only
-Have to work with HTML, CSS, and JavaScript? Including on the server side?
+work with HTML, CSS, and JavaScript? Including on the server side?
 Welcome to NodeJS (usually called Node). Since 2009 Node  has been a 
 [platform that lets you build networked services using JavaScript](http://nodejs.org/about/)
 (e.g. a web server). In simple terms it is an alternative to the more
