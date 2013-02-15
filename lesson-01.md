@@ -1,33 +1,10 @@
-# Starting with NodeStack
+# Starting with Node
 
-## Goals of picking new stack
+## Goals of this lesson
 
-1. Simplicity
-	* HTML, CSS, JavaScript, JSON is the whole stack
-2. Faster/easier development cycle
-	* Simple development environment
-		* Texteditor
-		* NodeJS
-		* npm (Node's module manager)
-		* MongoDB (optional) 
-	* A rapid development cycle
-		1. Code a front end with HTML, CSS and JavaScript
-		2. Use JSON blobs to mockup API requests (replace alter with API/DB calls as later)
-		3. Map/Wrap the URLs you need to service your pages (i.e. a NodeJS script)
-		4. Fire up the http server object, test, then iterate to evolve
-	* A growing ecosystem of modules and tools
-		* jslint, jscheckstyle, YUI's tools, eventually Mojito
-		* A large developer community
-3. Performance and scalability
-	* More control with less complexity
-		* NodeJS
-		* A datastore/database (e.g. MongoDB via MongoLab or MongoHQ)
-		* A scaling environment (e.g. Heroku, Nodejitsu, EngineYard)
-	* Levage frontend experience through the whole stack
-		* The NodeJS uses the same process model as the Browser
-		* You already are experienced with JavaScript
-		* You already use/understand an HTTP transaction (e.g. GET, POST, PUT, DELETE)
-		* Add an basic understanding of NodeJS' module system and you're ready to go
+* Install NodeJS
+* Install a NodeJS module
+* Build a minimal, safe, web server
 
 
 ## Hands on
@@ -280,7 +257,7 @@ The follow two exercises use both reading content from disc and the concept of d
 routes using the express module.
 
 * How would you support adding CSS and JavaScript files? (hint: add some more routes)
-* How would you mockup an API service? (hint: use a text file containing JSON data)
+* How would you mockup an API service? (hint: use a text file containing [JSON](http://json.org) data)
 
 Here's an example JSON file:
 
