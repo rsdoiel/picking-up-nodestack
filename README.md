@@ -8,9 +8,8 @@ is evolving from a presentation I made for my colleages.
 
 ## What is Node and Nodestack?
 
-Ever wonder what it would be like to build things for the web and only
-work with HTML, CSS, and JavaScript? Including on the server side?
-Welcome to NodeJS (usually called Node). Since 2009 Node  has been a 
+Ever wonder what it would be like to build things for the web, including server side, and only
+work with HTML, CSS, and JavaScript? Welcome to NodeJS (usually called Node). Since 2009 Node  has been a 
 [platform that lets you build networked services using JavaScript](http://nodejs.org/about/)
 (e.g. a web server). In simple terms it is an alternative to the more
 vintage web development stacks like LAMP (Linux+Apache+MySQL+PHP/Perl/Python).
@@ -23,8 +22,10 @@ like MySQL. Node+Database for web development is Nodestack.
 
 ### The promise of Nodestack
 
-While it is easy to over hype Node and databases like MongoDB here's
-the promise that has developers on both sides of the web server transaction excited.
+It is easy to over sell Nodestack. It will not make you sliced toast and coffee when
+you get up in the morning.  It will not bring us world peace.  It will provide a
+platform that teases with possibilites.  Here a lists of promises which have devlopers
+exited about Node on with sides the web server transaction-
 
 1. Simplicity
 	* HTML, CSS, JavaScript, JSON through the whole stack
@@ -52,6 +53,13 @@ the promise that has developers on both sides of the web server transaction exci
 		* You already use/understand an HTTP transaction (e.g. GET, POST, PUT, DELETE)
 		* Node shares the same event oriented process model as the Browser
 		* Add an basic understanding of NodeJS' module system and you're ready to go
+
+Note that Node doesn't guarantee you'll always be simplier, faster, easier,
+more performant and scalable. By supporting the same process model as the browser, the same programming
+language as the browser and by providing a very solid module system it goes a long way to starting you
+out closer to the goals of simpler, faster, easier, more performant and scalable.
+
+That is the end of the sales pitch. Now onto something more productive.
 
 
 ## Picking up Nodestack
