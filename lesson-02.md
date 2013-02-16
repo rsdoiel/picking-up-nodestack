@@ -8,7 +8,7 @@ except supporting alarms.
 
 ## Goals of this lesson
 
-* Use two additional Unix commands (**mkdir** and **touch**)
+* Use two additional Unix commands - *mkdir* and *touch*
 * Mock up an API using with JSON files
 * How to use YUI 3 with Node
 * Access remote services server side to support responsive design goals in the browser
