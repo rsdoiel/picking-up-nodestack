@@ -26,7 +26,7 @@ like MySQL. Node+Database for web development is Nodestack.
 
 It is easy to over sell Nodestack. It will not make you sliced toast and coffee when
 you get up in the morning.  It will not bring us world peace.  It will provide a
-platform that teases with possibilites.  Here a lists of promises which have devlopers
+platform that teases with possibilites.  Here's a list of promises which have devlopers
 exited about Node on with sides the web server transaction-
 
 1. Simplicity
