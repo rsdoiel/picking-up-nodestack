@@ -14,11 +14,11 @@
 1. Startup your Macbook
 2. Download NodeJS package from http://nodejs.org
 3. In Finger, double click on Downloads/node-*.pkg and run the installer
-4. Open a the Mac "Terminal" (Applications -> Utilities -> Terminal)
-5. type "cd Desktop" and press enter (We'll use your desktop to keep things simple for now)
-6. type "node"
-7. type "console.log('Hello World!');"
-8. type ".exit" and you're done with getting setup
+4. Open a the Mac **Terminal** (Applications -> Utilities -> Terminal)
+5. type **cd Desktop** and press enter (We'll use your desktop to keep things simple for now)
+6. type **node**
+7. type **console.log('Hello World!');**
+8. type **.exit** and you're done with getting setup
 
 Congratulations you're up and running with NodeJS.
 
@@ -26,11 +26,13 @@ Congratulations you're up and running with NodeJS.
 
 1. Start up your favorite Text Editor
 2. Open a new file
-	a. Type the following line without the double quotes
-	b. "console.log('Hello again.');"
-	c. Save it to your desktop as "hello.js"
+	a. Type the following line 
+
+	**console.log('Hello again.');**
+
+	b. Save it to your desktop as **hello.js**
 3. Switch the Terminal
-4. Type "node hello.js"
+4. Type **node hello.js**
 5. Congratulations you've written your first Node program
 
 You've written a simple program.
@@ -119,7 +121,7 @@ type the JavaScript comments)
 
 Now let's try this out. 
 	
-1. Switch back to Terminal and type- "node server.js"
+1. Switch back to Terminal and type- **node server.js**
 2. Point your browser at http://localhost:3000
 3. You should see your "Hi There" page
 4. Try http://localhost:3000/something-else
