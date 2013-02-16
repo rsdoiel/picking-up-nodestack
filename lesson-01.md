@@ -261,11 +261,11 @@ What we learned so far
 
 # [On your own](homework-01.md)
 
-The following homework expores adding more routes to your simple web server.
+The following homework explores adding more routes to your previous web server.
 
 * How would you support adding CSS, JavaScript and [JSON](http://json.org) files? (hint: add some more routes)
-* Using express, how do you make sure that files you're sending to the browser are sent with the correct mime-type?
-
+* Using express, how do you make sure that the files you're send to the browser are sent with the correct mime-type?
+* How would you adjust the http status code returned along with your new content?
 
 Here's an example [JSON](http://json.org) file:
 
