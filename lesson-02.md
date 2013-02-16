@@ -8,7 +8,7 @@ except supporting alarms.
 
 ## Goals of this lesson
 
-* Use two additional Unix commands - *mkdir* and *touch*
+* Use two additional Unix commands - **mkdir** and **touch**
 * Mock up an API using with JSON files
 * How to use YUI 3 with Node
 * Access remote services server side to support responsive design goals in the browser
@@ -54,7 +54,7 @@ The site will consist of the following files when we're done-
 * Site/mockup/weather.json
 
 We will iterate through the construction process so initially
-Site/index.mustache will be Site/index.html before we convert it
+**Site/index.mustache** will be **Site/index.html** before we convert it
 to a template for server side processing.
 
 ## Prequisites
@@ -69,9 +69,9 @@ Install YUI3 for Node using the usual npm command-
 
 From the Mac Terminal we need to create a new folder called alarmclock along
 with a simple directory structure and some empty files.  We're going to use
-three Unix commands - *mkdir*,  *cd*, and *touch*. The first two respectively
+three Unix commands - **mkdir**,  **cd**, and **touch**. The first two respectively
 create a new directory (i.e. folder in Mac parlance), change directory (we
-did this is the last lesson). The last one, *touch*, does two things
+did this is the last lesson). The last one, **touch**, does two things
 
 1. if a file doesn't exist it creates it
 2. updates the modified timestamp for the file that exists or was just created
@@ -103,10 +103,10 @@ This is what we'll build first
 4) placeholder JavaScript
 
 Now we're ready to fill in a very simple web server using express.  
-Express can treat the *Site* folder like the _htdocs_ folder in an 
-Apache setup.  To do that we tell express the full path to *Site*. 
+Express can treat the **Site** folder like the _htdocs_ folder in an 
+Apache setup.  To do that we tell express the full path to **Site**. 
 That way only the contents in Sites is served up and nothing else.
-We'll call this JavaScript file *server.js* like last time.
+We'll call this JavaScript file **server.js** like last time.
 
 
 ```JavaScript
@@ -123,8 +123,8 @@ We'll call this JavaScript file *server.js* like last time.
 ```
 
 
-Next let's fill in some boilerplate HTML in *Site/index.html* (later
-we'll rename this to *Site/index.mustache*).
+Next let's fill in some boilerplate HTML in **Site/index.html** (later
+we'll rename this to **Site/index.mustache**).
 
 ```HTML
     <!DOCTYPE html>
@@ -147,7 +147,7 @@ we'll rename this to *Site/index.mustache*).
 ```
 
 Our CSS will just set the color and font for now (i.e. 
-*Site/css/style.css*)-
+**Site/css/style.css**)-
 
 ```CSS
 	body {
@@ -160,7 +160,7 @@ Our CSS will just set the color and font for now (i.e.
 ```
 
 And finally our JavaScript placeholder we'll run in the browser
-(i.e. *Site/js/alarmclock.js*)-
+(i.e. **Site/js/alarmclock.js**)-
 
 ```JavaScript
 	// Setup YUI and our Y object
