@@ -33,7 +33,7 @@ exited about Node on with sides the web server transaction-
 	* HTML, CSS, JavaScript, JSON through the whole stack
 2. Faster/easier development cycle
 	* Simple development environment
-		* [Text Editor](http://en.wikipedia.org/wiki/Text_Editor) (e.g. [Scripted-Editor](https://github.com/scripted-editor/scripted/), [Adobe Brackets](https://github.com/adobe/brackets), [SublimeText](http://www.sublimetext.com/), or even [Vim](http://en.wikipedia.org/wiki/Vi) and [Emacs](http://www.gnu.org/software/emacs/) if you're old school)
+		* [Text Editor](http://en.wikipedia.org/wiki/Text_Editor) (e.g. [Scripted-Editor](https://github.com/scripted-editor/scripted/), [Adobe Brackets](https://github.com/adobe/brackets), [SublimeText](http://www.sublimetext.com/), or even [Vi](http://en.wikipedia.org/wiki/Vi) and [Emacs](http://www.gnu.org/software/emacs/) if you're old school)
 		* [NodeJS](http://nodejs.org)
 		* [npm](http://npmjs.org) (Node's module manager)
 		* [MongoDB](http://mongodb.org) (optional) 
