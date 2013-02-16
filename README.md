@@ -33,10 +33,10 @@ exited about Node on with sides the web server transaction-
 	* HTML, CSS, JavaScript, JSON through the whole stack
 2. Faster/easier development cycle
 	* Simple development environment
-		* Texteditor
-		* NodeJS
-		* npm (Node's module manager)
-		* MongoDB (optional) 
+		* [Text Editor](http://en.wikipedia.org/wiki/Text_Editor) (e.g. [Scripted-Editor](https://github.com/scripted-editor/scripted/), [Adobe Brackets](https://github.com/adobe/brackets), [SublimeText](http://www.sublimetext.com/), or even [Vim](http://en.wikipedia.org/wiki/Vi) and [Emacs](http://www.gnu.org/software/emacs/) if you're old school)
+		* [NodeJS](http://nodejs.org)
+		* [npm](http://npmjs.org) (Node's module manager)
+		* [MongoDB](http://mongodb.org) (optional) 
 	* A rapid development cycle
 		1. Code a front end with HTML, CSS and JavaScript
 		2. Use JSON blobs to mockup API requests (replace with API/DB calls on a later interation)
