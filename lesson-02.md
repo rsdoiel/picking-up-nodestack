@@ -6,13 +6,15 @@ Yahoo's YQL service), and allow the setting of alarms if JavaScript
 is turned on. We will take a responsive design approach for everything
 except supporting alarms.
 
-When you've completed this lesson you should have learned the following
+## Goals of this lesson
 
 * Use two additional Unix commands (*mkdir* and *touch*)
 * Mock up an API using with JSON files
 * How to use YUI 3 with Node
 * Access remote services server side to support responsive design goals in the browser
 * Create simple Mustache templates and process via YUI3 Handlebar module
+
+## Hands on
 
 ### Project requirements
 
