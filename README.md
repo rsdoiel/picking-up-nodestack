@@ -72,7 +72,8 @@ your jumping off point for exploring Node on your own. Homeworks will require ad
 independant research on your part to complete (e.g. looking up docs at nodejs.org or a modules'
 own website like yuilibrary.com or expressjs.com).
 
-## The lessions
+## The lessons
 
 * [Getting Node setup and run](lesson-01.md)
 * [A simple project](lesson-02.md)
+
