@@ -2,21 +2,16 @@
 <html lang="en">
 	<head>
 		<title>Alarm Clock</title>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="/css/style.css" />
 	</head>
 	<body>
 		<header>Alarm Clock</header>
-		<section id="weather">
-			<noscript>Weather information requires JavaScript to contact
-			the weather service</noscript>
-		</section>
-		<section id="clock"></section>
-		<section id="alarms"></section>
-		<!--
-			I'm using YUI 3 to build this app because it is supported
-			both in most browser and server side with Node.
-		-->
-		<script rel="javascript" src="http://yui.yahoo.com/3.8.0/build/yui-min.js"></script>
-		<script rel="javascript" src="/js/alarmclock.js"></script>
+		<section id="weather">Weather Info will go here.</section>
+		<section id="clock">10:00 AM</section>
+		<section id="alarms">None set.</section>
+		<footer>Have a good day.</footer>
+		<script src="http://yui.yahooapis.com/3.8.1/build/yui/yui-min.js"></script>
+		<script src="/js/alarmclock.js"></script>
 	</body>
 </html>
