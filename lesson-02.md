@@ -1,4 +1,4 @@
-# Front to back development with Node
+# A simple site
 
 If we're using similar technology client side as server side can you start prototyping from the browser? Yes.
 Because we're working with JavaScript on both sides of the equation it makes allot of sense to start in
