@@ -1,12 +1,14 @@
 # Picking up Nodestack
 
+## Prologue
+
 picking-up-nodestack is designed to be a self guided tour to explore writing 
 web services based on NodeJS and JSON friendly databases (e.g. [MongoDB](http://mongodb.org))
 or public web APIs (e.g. [YQL](http://developer.yahoo/com/yql/console)). It
 is evolving from a presentation I made for my colleages.
 
 
-## What is Node and Nodestack?
+### What is Node and Nodestack?
 
 Ever wonder what it would be like to build things for the web, including server side, and only
 work with HTML, CSS, and JavaScript? Welcome to NodeJS (usually called Node). Since 2009 Node  has been a 
@@ -20,7 +22,7 @@ in one of the popular NoSQL varieties that is good at supporting JSON representa
 like MySQL. Node+Database for web development is Nodestack.
 
 
-### The promise of Nodestack
+#### The promise of Nodestack
 
 It is easy to over sell Nodestack. It will not make you sliced toast and coffee when
 you get up in the morning.  It will not bring us world peace.  It will provide a
@@ -62,7 +64,7 @@ out closer to the goals of simpler, faster, easier, more performant and scalable
 That is the end of the sales pitch. Now onto something more productive.
 
 
-## Picking up Nodestack
+## Introduction
 
 This is a self guided tour broken down into lessons, excersizes and homeworks.  The lessons
 are a narrative sprinkled with short exercises meant to illustrate a particular point. Homeworks
@@ -70,7 +72,7 @@ your jumping off point for exploring Node on your own. Homeworks will require ad
 independant research on your part to complete (e.g. looking up docs at nodejs.org or a modules'
 own website like yuilibrary.com or expressjs.com).
 
-# The lessions
+## The lessions
 
 * [Getting Node setup and run](lesson-01.md)
 * [A simple project](lesson-02.md)
