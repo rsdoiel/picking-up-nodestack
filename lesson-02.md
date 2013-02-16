@@ -39,3 +39,27 @@ That way only the contents in Sites is served up and nothing else.
     server.listen(3000);
 ```
 
+Next let's full in some boiler plate HTML in *Site/index.html*.
+
+```HTML
+    <!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>Alarm Clock</title>
+			<link rel="stylesheet" href="/css/style.css" />
+		</head>
+		<body>
+			<header>Alarm Clock</header>
+			<section id="weather">
+				<noscript>Weather information requires JavaScript to contact the weather service</noscript>
+			</section>
+			<section id="clock"></section>
+			<section id="alarms"></section>
+			<!--
+				I'm using YUI 3 to build this app because it is supported both in most browser and server side with Node.
+			-->
+			<script rel="javascript" src="http://yui.yahoo.com/3.8.0/build/yui-min.js"></script>
+			<script rel="javascript" src="/js/alarmclock.js"></script>
+		</body>
+	</html>
+```
