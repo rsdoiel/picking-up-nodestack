@@ -1,4 +1,4 @@
-# A simple site
+# A simple project
 
 In our next lesson we're going to build a simple single page site. It
 will contain a simple digital clock, current weather forcast (we will get this from
