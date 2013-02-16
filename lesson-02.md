@@ -1,24 +1,47 @@
 # A simple site
 
-If we're using similar technology client side as server side can you start prototyping from the browser? Yes.
-Because we're working with JavaScript on both sides of the equation it makes allot of sense to start in
-the browser.  This is sometimes called "front to back" prototyping. All you need is the express based
-web server from [lesson 1](lesson-01.md) to get started. Here's a simple web server that supports three
-initial files - index.html, css/style.css, js/alarmclock.js. This time we're going to place all these
-files in a their own folder called *Site*.
+In our next lesson we're going to build a simple single page site. It
+will be a simple alarm clock page. It will include the days weather
+forcast (we will get this from Yahoo's YQL service), a clock and
+alarms.  We will using responsive design so that browsers without
+JavaScript enabled will still see something useful.
+
+When you've completed this lesson you should have learned the following
+
+* Mocking up services with JSON blobs
+* Access remote services server side via YUI3' io and YQL modules
+* Simple Mustache template processing via YUI3 Handlebar module
+
+The site will consist of the following files when we're done-
+
+* Site/index.mustache
+* Site/css/style.css
+* Site/js/alarmclock.js
+* Site/mockup/weather.json
+
+## Prequisites
+
+Install YUI3 stable with npm with the following command-
+
+```shell
+	npm isnstall yui@stable
+```
+
+## Setup
 
 Setup your work environment by starting up your Mac Terminal and running the following commands-
 
 ```shell
-    mkdir -p alarmcock/Site/js
-    mkdir -p alarmcock/Site/css
-    mkdir -p alarmcock/Site/mockup
+    mkdir -p alarmclock/Site/js
+    mkdir -p alarmclock/Site/css
+    mkdir -p alarmclock/Site/mockup
     cd alarmclock
     touch server.js
+    touch Site/index.mustache
     touch Site/index.html
     touch Site/css/style.css
     touch Site/js/alarmclock.js
-    touch Site/mockup/alarmclock.json
+    touch Site/mockup/weather.json
 ```
 
 Now we're ready to fill in a very simple web server using express.  Express can treat the *Site* folder
@@ -28,18 +51,18 @@ That way only the contents in Sites is served up and nothing else.
 
 ```JavaScript
     var path = require("path"),
-        express = requires("express"),
+        express = require("express"),
         server = express();
         
     // Setup of some default logging
-    server.use(express.logger);
+    server.use(express.logger());
     // Now setup our document root.
     server.use(express.static(path.join(__dirname, "Site")));
     // Finally listen on port 3000
     server.listen(3000);
 ```
 
-Next let's full in some boiler plate HTML in *Site/index.html*.
+Next let's fill in some boiler plate HTML in *Site/index.mustache*.
 
 ```HTML
     <!DOCTYPE html>
@@ -62,4 +85,10 @@ Next let's full in some boiler plate HTML in *Site/index.html*.
 			<script rel="javascript" src="/js/alarmclock.js"></script>
 		</body>
 	</html>
+```
+
+Start up your simple web server and make sure you can see this page.
+
+```shell
+	node server.js
 ```
