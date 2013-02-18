@@ -5,6 +5,7 @@
 * Install NodeJS
 * Install a NodeJS module
 * Build a minimal, safe, web server
+* Introduce the concept of **routes**
 
 
 ## Hands on
