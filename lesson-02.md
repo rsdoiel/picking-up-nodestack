@@ -56,7 +56,7 @@ Install YUI3 for Node using the usual npm command-
 	npm install yui@stable
 ```
 
-## Setup boiler plat
+## Setup boilerplate
 
 From the Mac Terminal we need to create a new folder called alarmclock along
 with a simple directory structure and some empty files.  We're going to use
