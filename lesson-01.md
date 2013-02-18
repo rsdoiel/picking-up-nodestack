@@ -26,7 +26,7 @@ Congratulations you're up and running with NodeJS.
 
 1. Start up your favorite Text Editor
 2. Open a new file
-	2.a. Type the following line 
+	2.1. Type the following line 
 
 	**console.log('Hello again.');**
 
