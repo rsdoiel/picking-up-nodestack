@@ -72,17 +72,17 @@ are your jumping off point for exploring Nodestack on your own. Homeworks will r
 independant research on your part to complete (e.g. looking up docs at nodejs.org or a modules'
 own website like yuilibrary.com or expressjs.com).
 
-The site is split into three parts:
+Picking up Nodestack covers three general areas:
 
-1) Picking up Nodestack - the basics of NodeJS
-2) Getting going with Mongo - the basics of this popular NoSQL DB from a Node perspective
-3) Front to back construction - 
+1. The basics of Node
+2. The basics of MongoDB from a Node perspective
+3. Front to back construction with YUI 3 
 	* prototyping from the browser and a minimal web server
-	* stubbing services from prototyping
-	* filling out responsive designed, API driven web system
+	* YUI under Node
+	* building responsive designed and API driven solutoins
 
 
-## The lessons
+## the lessons
 
 * [Getting Node setup and run](lesson-01.md)
 * [A simple project](lesson-02.md)
