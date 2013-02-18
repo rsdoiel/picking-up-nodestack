@@ -118,10 +118,10 @@ type the JavaScript comments)
 
 Now let's try this out. 
 	
-1. Switch back to Terminal and type- **node server.js**
-2. Point your browser at http://localhost:3000
+1. Switch back to Terminal and type: **node server.js**
+2. Point your browser at [http://localhost:3000](http://localhost:3000)
 3. You should see your "Hi There" page
-4. Try http://localhost:3000/something-else
+4. Try [http://localhost:3000/something/else](http://localhost:3000/something/else)
 5. You should see the 404 page
 
 That's it. You've written your first high performance web service.
@@ -129,24 +129,32 @@ That's it. You've written your first high performance web service.
 
 ### Perspective
 
-What you just wrote can handle about 600-800 concurrent requests (at least on my
-Macbook Pro). That is comparable with what www.usc.edu can handle for the home page.
-Our campus web server is made up of two large Solaris boxes run behind a high 
-performance hardware load balancer. So why is that? We're using a different
-model to process http requests.
+What you just wrote can handle about 600-800 concurrent requests (at least on my 
+Macbook Pro). That is comparable with what [www.usc.edu](http://www.usc.edu) can
+handle for home page requests. USC's campus web server (2013) is made up
+of two large Solaris boxes run behind a high performance hardware load balancer. 
+It is typical of current (2013) enterprise web server configurations. So why is
+Node able to do this? Node takes a very different approach than Apache-
 
-1. We're only doing what is needed and nothing more (Apache, does much, much more)
-2. We're only running one process not one process per browser request
-3. We're reading all our content from memory (fast) one time versus reading from disc (slow) for each request
+1. Node only does what our script asks it to do (Apache, does much, much more)
+2. Node only runs one process not one process per browser request
+3. Our example is reading all our content requests from memory (fast) instead of reading from disc (slow)
 
-Look at the lines between "http.createServer" and "listen". This is where we
-implement what Apache does internally. In practice we don't have to do all 
-this heavy lifting (e.g. set headers, etc).  We can use a Node module called express
-which will let us define "routes" that will call a function that sends back an
-appropriate response. 
+Look at the lines between "http.createServer" and "listen". This is roughly
+analogous to Apache's processing pipeline. That is how Apache supports
+feature rich modules like PHP. Node http module doesn't provide this.
+Node's http module requires your to define how your requests
+will be handled to be useful. Apache gives you some helpful default behavior.
+
+This isn't as bad as it sounds.  In practice we don't have to do all 
+this heavy lifting (e.g. set headers, etc).  Node has a module called *express*
+which makes building web services very straight forward by providing support
+for *routes*.
 
 
 ## Routes
+
+	A *route* defines a relationship between a URL and how to process it.
 
 Let's take a step back to the web browser a moment.  Web browser interaction is 
 centered around events and callback. I've seen this pattern in the jQuery scripts-
@@ -157,50 +165,37 @@ centered around events and callback. I've seen this pattern in the jQuery script
 	});
 ```
 
-What this is doing is listening for a "blur" event on the tag with the
-id attribute of "my-thing". When that event happens then a function
-is called to do some work. The jargon name for this is a "callback". 
+What this is defining is an event response. The browser is listens for a "blur" event
+on the tag with the id attribute of "my-thing". When that event happens then a function
+is called to do some work. The jargon name for this type of function is a "callback". 
 
 Now look at our previous web server.  The function inside of "http.createServer(...);" 
-is a callback. When an http request is received, http calls this function to process 
-the request and complete the response.  
+is a callback. When an http request (an event) is received the http module calls 
+the function to process the request and complete the response (e.g. response.end()).  
 
 In our next example we'll take it a step further. We'll associate a specifically
-requested path with a specific response. This is the core idea behind what is
+requested path with a specific callback. This is the core idea behind what is
 popularly been called "routing". A route describes the specific relationship between
 a path and how to process it.  
 
 Looking back at our "Hi There" example our routes were "/", and everything else (i.e. "*").
-To explore building a web server we're going to use this route idea by using a Node
-module called Express (see http://expressjs.com for all the gory details).
+To simplify building a web server we're going to use this route idea by building on a Node
+module called **express** (see http://expressjs.com for all the gory details).
 
 
 ### Prerequisites
 
-Before we can use express we need to install it. It is not one of the core modules
-that comes out of the box with NodeJS though it is a very popular model.
-From your Mac Terminal program run the following command-
+Before we can use **express** we need to install it. It is not one of the core modules
+that comes out of the box with Node though it is a very popular model and has been 
+available since the very early days of Node.  From your Mac Terminal program run 
+the following command-
 
 ```shell
 	npm install express
 ```
 
-This will install the express module and make it available to NodeJS.  
+This will install the express module and make it available to Node.  
 
-We're going to create a new file to add to our example. In your text editor
-create a file named "api-mockup.json" that will have the content below-
-
-```JavaScript
-	{
-		"friends": ["John", "Paulina", "Georgina", "Ringo"],
-		"favorites": {
-			"colors": {
-				"cardinal": ["John", "Paulina"],
-				"gold": ["Georgina", "Ringo"]
-			}
-		}
-	}
-```
 
 ### [Exploring routes](exercise-03)
 
@@ -244,7 +239,8 @@ What can a route do? Anything you program it to.  A route can send back whatever
 you want -  HTML, CSS, JavaScript, JSON, images or movies. It can talk to a database
 and return results. It can run a calculation and return a result. It could also take a
 template and combine it with data before sending it back to the browser via the response
-object.
+object. In this example we're support sending back a simple HTML page with our content
+or an HTML page with an error message.
 
 For more information about the Express NodeJS module see http://expressjs.com.
 
