@@ -258,24 +258,8 @@ What we learned so far
 
 The following homework explores adding more routes to your previous web server.
 
-* How would you support adding CSS, JavaScript and [JSON](http://json.org) files? (hint: add some more routes)
-* Using express, how do you make sure that the files you're send to the browser are sent with the correct mime-type?
+* How would you support to serve CSS files? (hint: add some more routes)
+* How do you make sure that the files you're send to the browser are sent with the correct mime-type?
 * How would you adjust the http status code returned along with your new content?
-
-Here's an example [JSON](http://json.org) file:
-
-```JavaScript
-	{
-		"friends": ["John", "Paulina", "Georgia", "Ringo"],
-		"favorites": {
-			"colors": {
-				"cardinal": ["John", "Ringo"],
-				"gold": ["Paulina", "Georgia"],
-			}
-		}
-	}
-```
-
-JSON files are usually served with a content type of application/javascript.
 
 
