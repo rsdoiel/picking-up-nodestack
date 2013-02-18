@@ -26,11 +26,11 @@ Congratulations you're up and running with NodeJS.
 
 1. Start up your favorite Text Editor
 2. Open a new file
-	a. Type the following line 
+	2.a Type the following line 
 
 	**console.log('Hello again.');**
 
-	b. Save it to your desktop as **hello.js**
+	2.b Save it to your desktop as **hello.js**
 3. Switch the Terminal
 4. Type **node hello.js**
 5. Congratulations you've written your first Node program
