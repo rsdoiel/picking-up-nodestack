@@ -26,12 +26,7 @@ Congratulations you're up and running with NodeJS.
 
 1. Start up your favorite Text Editor
 2. Open a new file
-	* Type the following line 
-
-```JavaScript
-	console.log('Hello again.');
-```
-
+	* Type the following line:  **console.log('Hello again.');**
 	* Save it to your desktop as **hello.js**
 3. Switch the Terminal
 4. Type **node hello.js**
