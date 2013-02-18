@@ -66,7 +66,7 @@ That is the end of the sales pitch. Now onto something more productive.
 
 ## Introduction
 
-This is a self guided tour broken down into lessons, excersizes and homeworks.  The lessons
+This is a self guided tour broken down into lessons, exercises and homeworks.  The lessons
 are narrative sprinkled, lists and short exercises meant to illustrate a particular point. Homeworks
 are your jumping off point for exploring Nodestack on your own. Homeworks will require additional
 independant research on your part to complete (e.g. looking up docs at nodejs.org or a modules'
