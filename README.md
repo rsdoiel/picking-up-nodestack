@@ -67,13 +67,24 @@ That is the end of the sales pitch. Now onto something more productive.
 ## Introduction
 
 This is a self guided tour broken down into lessons, excersizes and homeworks.  The lessons
-are a narrative sprinkled with short exercises meant to illustrate a particular point. Homeworks
-your jumping off point for exploring Node on your own. Homeworks will require additional
+are narrative sprinkled, lists and short exercises meant to illustrate a particular point. Homeworks
+are your jumping off point for exploring Nodestack on your own. Homeworks will require additional
 independant research on your part to complete (e.g. looking up docs at nodejs.org or a modules'
 own website like yuilibrary.com or expressjs.com).
+
+The site is split into three parts:
+
+1) Picking up Nodestack - the basics of NodeJS
+2) Getting going with Mongo - the basics of this popular NoSQL DB from a Node perspective
+3) Front to back construction - 
+	* prototyping from the browser and a minimal web server
+	* stubbing services from prototyping
+	* filling out responsive designed, API driven web system
+
 
 ## The lessons
 
 * [Getting Node setup and run](lesson-01.md)
 * [A simple project](lesson-02.md)
+
 
