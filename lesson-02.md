@@ -1,18 +1,15 @@
-# A simple project
+# A simple project - time and weather
 
 In our next lesson we're going to build a simple single page site. It
 will contain a simple digital clock, current weather forcast (we will get this from
-Yahoo's YQL service), and allow the setting of alarms if JavaScript
-is turned on. We will take a responsive design approach for everything
-except supporting alarms.
+Yahoo's YQL service). We will take a responsive design approach by including
+support to get the weather data server side as well as browser side.
 
 ## Goals of this lesson
 
 * Use two additional Unix commands - **mkdir** and **touch**
-* Mock up an API using with JSON files
-* How to use YUI 3 with Node
-* Access remote services server side to support responsive design goals in the browser
-* Create simple Mustache templates and process via YUI3 Handlebar module
+* Learn how to use YUI 3 in Node as well as the browser
+* Access remote services to support responsive design goals in the browser
 
 ## Hands on
 
@@ -27,18 +24,17 @@ If JavaScript is available then we should
 support
 
 * A clock that updates each second
-* The weather forecast, updating every hour (if on-line)
-* The option to set alarms on specific days of the week
-* Work off line with the last weather data available
+* The weather forecast, updating every hour
 
 
 ### Why YUI?
 
-Many people think of YUI interms of a UI library (which it can
-be) but YUI provides much more than that. It provides a solid
-module system that works in Node as well as in the browser. It
-has robust data classes such as the Date module a reliable IO
-library a consistant integration of Mustache templates via
+Many people think of YUI in terms of a UI library like jQuery
+(which it can be) but YUI provides much more than that. 
+YUI 3 provides a solid module system that works in Node as well 
+as in the browser. It has robust data classes such as the 
+Date module,  a reliable IO library for content integration,
+and support for templating engines like Mustache via
 the Handlbar module. In short YUI considers Node a first class
 citizen along side browsers such as Firefox, Chrome and Safari.
 YUI also comes with a robust toolchain which have migrated to
@@ -48,14 +44,9 @@ Node too.
 
 The site will consist of the following files when we're done-
 
-* Site/index.mustache
+* Site/index.html
 * Site/css/style.css
 * Site/js/alarmclock.js
-* Site/mockup/weather.json
-
-We will iterate through the construction process so initially
-**Site/index.mustache** will be **Site/index.html** before we convert it
-to a template for server side processing.
 
 ## Prequisites
 
@@ -123,8 +114,7 @@ We'll call this JavaScript file **server.js** like last time.
 ```
 
 
-Next let's fill in some boilerplate HTML in **Site/index.html** (later
-we'll rename this to **Site/index.mustache**).
+Next let's fill in some boilerplate HTML in **Site/index.html**.
 
 ```HTML
     <!DOCTYPE html>
