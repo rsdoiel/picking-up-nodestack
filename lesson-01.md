@@ -2,8 +2,8 @@
 
 ## Goals of this lesson
 
-* Install NodeJS
-* Install a NodeJS module
+* Install Node
+* Install a Node module
 * Build a minimal, safe, web server
 * Introduce the concept of **routes**
 
@@ -13,31 +13,30 @@
 ### Getting setup
 
 1. Startup your Macbook
-2. Download NodeJS package from http://nodejs.org
-3. In Finger, double click on Downloads/node-*.pkg and run the installer
-4. Open a the Mac **Terminal** (Applications -> Utilities -> Terminal)
+2. Download Node package from http://nodejs.org
+3. In Finder, double click on Downloads/node-*.pkg and run the installer
+4. Open a the Mac **Terminal** (Applications -> Utilities -> Terminal) application
 5. type **cd Desktop** and press enter (We'll use your desktop to keep things simple for now)
 6. type **node**
 7. type **console.log('Hello World!');**
 8. type **.exit** and you're done with getting setup
 
-Congratulations you're up and running with NodeJS.
+Congratulations you're up and running with Node.
 
 ### [Small step forward](exercise-01)
 
 1. Start up your favorite Text Editor
 2. Open a new file
-	* Type the following line:  **console.log('Hello again.');**
+        * Type the following line:  **console.log('Hello again.');**
 	* Save it to your desktop as **hello.js**
-3. Switch the Terminal
+3. Switch back to the Terminal
 4. Type **node hello.js**
-5. Congratulations you've written your first Node program
 
-You've written a simple program.
+Congratulations you've written your first Node program.
 
 ## [Big step forward](exercise-02)
 
-We're going to use two NodeJS modules. Both are built in with NodeJS so we don't need to
+We're going to use two NodeJS modules. Both are built in with Node so we don't need to
 install anything extra.  One module is called "fs" and the other is called "http".  "fs" is used to
 access the file system (e.g. you can read or write files using it).  "http" module lets us create
 web servers easily.
@@ -132,10 +131,14 @@ That's it. You've written your first high performance web service.
 
 What you just wrote can handle about 600-800 concurrent requests (at least on my 
 Macbook Pro). That is comparable with what [www.usc.edu](http://www.usc.edu) can
-handle for home page requests. USC's campus web server (2013) is made up
+handle for home page requests. USC's campus web server (Spring 2013) is made up
 of two large Solaris boxes run behind a high performance hardware load balancer. 
-It is typical of current (2013) enterprise web server configurations. So why is
-Node able to do this? Node takes a very different approach than Apache-
+The web server is Apache with PHP as well as a number of other Apache modules to
+various needs of departments and schools. It is typical of current (Spring 2013)
+enterprise web server configurations seen at many Universities.
+
+Why is Node on my Mac Book Pro able to do this? Node takes a very different
+approach than Apache-
 
 1. Node only does what our script asks it to do (Apache, does much, much more)
 2. Node only runs one process not one process per browser request
@@ -146,11 +149,17 @@ analogous to Apache's processing pipeline. That is how Apache supports
 feature rich modules like PHP. Node http module doesn't provide this.
 Node's http module requires your to define how your requests
 will be handled to be useful. Apache gives you some helpful default behavior.
+Node is providing much less out of the box and in this case that is good.
 
-This isn't as bad as it sounds.  In practice we don't have to do all 
-this heavy lifting (e.g. set headers, etc).  Node has a module called *express*
-which makes building web services very straight forward by providing support
-for *routes*.
+Incase you're worried about have to write everything Apache provides you don't.
+In my first example I am showing you allot of heavey lifting (e.g. setting headers,
+reading things into memory before starting the web service) but in practice we can
+build a server simpler.  Node gives you choices through a rich ecosystem of
+modules.  Node has a module called *express* which makes building web services
+very straight forward by providing support for a concept known as *routes*.
+
+Node+express provides you with a good default, out of the box starting
+point for building web services that are specific to your website's needs.
 
 
 ## Routes
@@ -158,7 +167,8 @@ for *routes*.
 	A *route* defines a relationship between a URL and how to process it.
 
 Let's take a step back to the web browser a moment.  Web browser interaction is 
-centered around events and callback. I've seen this pattern in the jQuery scripts-
+centered around events.  Events trigger callbacks. I've seen this pattern in the
+jQuery scripts-
 
 ```JavaScript
 	$('#my-thing').blur(function () {
@@ -166,18 +176,18 @@ centered around events and callback. I've seen this pattern in the jQuery script
 	});
 ```
 
-What this is defining is an event response. The browser is listens for a "blur" event
+What this is defining is an event response. The browser emmits a "blur" event
 on the tag with the id attribute of "my-thing". When that event happens then a function
 is called to do some work. The jargon name for this type of function is a "callback". 
 
-Now look at our previous web server.  The function inside of "http.createServer(...);" 
+Now look at our first web server.  The function inside of "http.createServer(...);" 
 is a callback. When an http request (an event) is received the http module calls 
 the function to process the request and complete the response (e.g. response.end()).  
 
 In our next example we'll take it a step further. We'll associate a specifically
 requested path with a specific callback. This is the core idea behind what is
 popularly been called "routing". A route describes the specific relationship between
-a path and how to process it.  
+a path and how it is to be processed.
 
 Looking back at our "Hi There" example our routes were "/", and everything else (i.e. "*").
 To simplify building a web server we're going to use this route idea by building on a Node
@@ -200,8 +210,8 @@ This will install the express module and make it available to Node.
 
 ### [Exploring routes](exercise-03)
 
-Now let's make a new version of server.js by modifying what we previously wrote
-so it now looks like (you can skip typing the JavaScript comments)-
+Now let's make a new version of **server.js** by modifying what we previously wrote
+so it looks like this (you can skip typing the JavaScript comments)-
 
 ```JavaScript
 	var express = require("express"),
@@ -216,7 +226,6 @@ so it now looks like (you can skip typing the JavaScript comments)-
 		// Notice we're using .sendfile instead of .end
 		// .sendfile will read a file from disc and keep
 		// it resident in memory for a period of time.
-		// How long can be configured by express.
 	        response.sendfile("index.html");
 	});
 	
@@ -262,5 +271,4 @@ The following homework explores adding more routes to your previous web server.
 * How would you support to serve CSS files? (hint: add some more routes)
 * How do you make sure that the files you're send to the browser are sent with the correct mime-type?
 * How would you adjust the http status code returned along with your new content?
-
 
