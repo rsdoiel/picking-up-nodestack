@@ -1,0 +1,20 @@
+/**
+ * site.css - Site wide styles for Picking Up Nodestack
+ * @author R. S. Doiel, <rsdoiel@gmail.com>
+ */
+
+body {
+    font-size: 12px;
+    font-family: Helvetica, Arial, Sanserif;
+    margin: 1em;
+    line-height: 1.5em;
+}
+
+code, pre {
+    font-size: 1em;
+    font-family: Typewriter, Courier, mono;
+}
+
+nav {
+    list-style-type: none;
+}
