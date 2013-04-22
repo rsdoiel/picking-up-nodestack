@@ -5,7 +5,13 @@
 picking-up-nodestack is designed to be a self guided tour to explore writing 
 web services based on NodeJS and JSON friendly databases (e.g. [MongoDB](http://mongodb.org))
 or public web APIs (e.g. [YQL](http://developer.yahoo/com/yql/console)). It
-is evolving from a presentation I made for my colleages.
+started as a presentation I made for my colleages and has evolved from there.
+
+### Credits for Awesome Fonts and YUI3
+
+This website relies on Open Source fonts and JavaScript libraries. YUI3 used under the
+BSD License and is available at [http://yuilibrary.com](http://yuilibrary.com). Font Awesome
+is used under the SIL Open Source license and is available at [http://fortawesome.github.io/Font-Awesome](http://fortawesome.github.io/Font-Awesome).
 
 
 ### What is Node and Nodestack?

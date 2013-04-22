@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Picking up Nodestack</title>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/site.css">
+    </head>
+    <body>
+        <header><h1>Picking Up Nodestack</h1></header>
+        <nav>
+            <li><a href="README.md">README</a></li>
+            <li><a href="lesson-01.md">Lesson 1</a></li>
+            <li><a href="homework-01.md">Homework 1</a></li>
+            <li><a href="lesson-02.md">Lesson 2</a></li>
+        </nav>
+        <article>
+            <noscript><a href="README.md" title="The markdown source for this README.md">README.md</a></script>
+        </article>
+        <footer>
+            <div class="copyright">copyright (c) 2013 R. S. Doiel, all rights reserved</div>
+            <div class="license"><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Picking Up Nodestack</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="R. S. Doiel" property="cc:attributionName" rel="cc:attributionURL">R. S. Doiel</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/rsdoiel/picking-up-nodestack.git" rel="dct:source">https://github.com/rsdoiel/picking-up-nodestack.git</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/rsdoiel/picking-up-nodestack.git" rel="cc:morePermissions">https://github.com/rsdoiel/picking-up-nodestack.git</a>.</div>
+        </footer>
+        <!-- START: Handlebars templates -->
+        <script id="navigation-template" type="text/x-handlebars-template">
+            <ol>
+                {{#articles}}
+                    <li><a href="{{link}}" title="{{tooltip}}">{{title}}</a> {{summary}}</li>
+                {{/articles}}
+            </ol>
+        </script>
+        <script id="link-template" type="text/x-handlebars-template">
+            <i class="icon-spinner icon-spin"></i>Loading {{title}}
+        </script>
+        <script id="article-template" type="text/x-handlebars-template">
+            <h2>{{title}}</h2>
+            <section>
+            {{content}}
+            </section>
+        </script>
+        <!-- END: Handlebars templates -->
+        <!-- START: JavaScript -->
+        <script src="http://yui.yahooapis.com/3.9.1/build/yui/yui-min.js"></script>
+        <script src="js/pun.js"></script>
+        <!-- END: JavaScript -->
+    </body>
+</html>
