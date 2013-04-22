@@ -1,0 +1,12 @@
+{
+        "name": "Picking Up Nodestack",
+        "description": "The documentation for running the book via httpster",
+        "version": "0.0.1-pre",
+        "url": "http://rsdoiel.github.io/picking-up-nodestack/",
+        "options": {
+             "outdir": "out"
+             "paths": [
+                "./js"
+             ]
+        }
+}
